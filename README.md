@@ -16,7 +16,25 @@
 ## Local usage from source code
 1. Before launching blockchain explorer you should bootstrap local test-network. Please refer to this [link](https://github.com/bcvouch/incharge-chaincode)
 2. For dummy data and presentation you can run ```npm test``` from this [repo](https://github.com/bcvouch/incharge-quorum-migration-to-chaincode) it will test whole smart contract and create dummy data that will appear in blockchain explorer
-3. Then please follow instruction in [Section `Quick start (using codebase)`](#Quick_start) 
+3. Then please follow instruction in [Section `Quick start (using codebase)`](#quick-start-using-codebase). Most important are:
+ - Create DB in Postgres [`Database Setup`](#database-setup)
+ - Update configuration in [`Update configuration`](#update-configuration). You can check example file in the ```blockchain-explorer/app/platform/fabric/connection-profile/local-network.json```. You need change only path to the private key certificate. 		
+      ```"adminPrivateKey": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/key.pem"
+			},
+      ```
+      public key certificate
+      ```
+			"signedCert": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/cert.pem"
+			}
+      ```
+      GRPC connection certificate
+      ```
+      "tlsCACerts": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/tlsca.pem"
+			},
+      ```
 
 
 Explorer is a simple, powerful, easy-to-use, well-maintained, open-source utility to browse activity on the underlying blockchain network. Users can configure and build Hyperledger Explorer on macOS and Ubuntu.
@@ -195,8 +213,6 @@ This guide assumes that you've already started the test network by following [Hy
 
 
 # Quick start (using codebase)
-## Quick_start
-
 ## Prerequisites
 
 * Nodejs 12, 14 and 16 (12.22.12, 14.21.3, 16.20.1 tested)

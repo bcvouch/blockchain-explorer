@@ -1,0 +1,48 @@
+{
+	"name": "local-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": false,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "Org1MSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"mychannel": {
+			"peers": {
+				"peer0.org1.example.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/key.pem"
+			},
+			"peers": ["peer0.org1.example.com"],
+			"signedCert": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.org1.example.com": {
+			"tlsCACerts": {
+				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/tlsca.pem"
+			},
+			"url": "grpcs://localhost:7051"
+		}
+	}
+}
