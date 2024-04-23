@@ -2,8 +2,6 @@
 
 # Blockchain Explorer
 
-## Local installation from source code
-
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/hyperledger-labs/blockchain-explorer?sort=semver)](https://github.com/hyperledger-labs/blockchain-explorer/releases)
 ![node-current](https://img.shields.io/badge/node-v12.13.1-blue)<br />
 [![Build Status](https://github.com/hyperledger-labs/blockchain-explorer/actions/workflows/build.yaml/badge.svg
@@ -13,6 +11,12 @@
 [![Documentation Status](https://readthedocs.org/projects/blockchain-explorer/badge/?version=main)](https://blockchain-explorer.readthedocs.io/en/main/?badge=main)
 [![Test](https://github.com/hyperledger-labs/blockchain-explorer/actions/workflows/test.yaml/badge.svg)](https://github.com/hyperledger-labs/blockchain-explorer/actions/workflows/test.yaml/badge.svg)
 <!-- badges -->
+
+
+## Local usage from source code
+1. Before launching blockchain explorer you should bootstrap local test-network. Please refer to this [link](https://github.com/bcvouch/incharge-chaincode)
+2. For dummy data and presentation you can run ```npm test``` from this [repo](https://github.com/bcvouch/incharge-quorum-migration-to-chaincode) it will test whole smart contract and create dummy data that will appear in blockchain explorer
+3. Then please follow instruction in [Section `Quick start (using codebase)`](#Quick_start) 
 
 
 Explorer is a simple, powerful, easy-to-use, well-maintained, open-source utility to browse activity on the underlying blockchain network. Users can configure and build Hyperledger Explorer on macOS and Ubuntu.
@@ -191,6 +195,7 @@ This guide assumes that you've already started the test network by following [Hy
 
 
 # Quick start (using codebase)
+## Quick_start
 
 ## Prerequisites
 
