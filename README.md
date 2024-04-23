@@ -19,7 +19,9 @@
 3. Then please follow instruction in [Section `Quick start (using codebase)`](#quick-start-using-codebase). Most important are:
  - Create DB in Postgres [`Database Setup`](#database-setup)
  - Update configuration in [`Update configuration`](#update-configuration). You can check example file in the ```blockchain-explorer/app/platform/fabric/connection-profile/local-network.json```. You need change only path to the private key certificate. 		
-      ```"adminPrivateKey": {
+ 
+      ```
+      "adminPrivateKey": {
 				"path": "/Users/voroshilovmax/Development/bcv/fabric-client-contract/crypto/local/key.pem"
 			},
       ```
