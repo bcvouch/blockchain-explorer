@@ -1,0 +1,23 @@
+name: Build hlf-explorer-db
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - hlf-explorer-db*
+    branches:
+      - main
+      - dev
+    paths:
+      - 'postgres-Dockerfile'
+      - '!**.md'
+      - '.github/workflows/build-explorer-db.yml'
+
+jobs:
+  build:
+    uses: bcvouch/gha-workflows/.github/workflows/build-mono.yaml@main
+    secrets: inherit
+    with:
+      image_name: bcvouch/hlf-explorer-db
+      app_name: hlf-explorer-db
+      dockerfile: postgres-Dockerfile
