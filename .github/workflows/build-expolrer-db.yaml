@@ -15,8 +15,7 @@ on:
 
 jobs:
   build:
-    uses: bcvouch/gha-workflows/.github/workflows/build-mono.yaml@main
-    secrets: inherit
+    uses: ./.github/workflows/build-docker.yaml
     with:
       image_name: bcvouch/hlf-explorer-db
       app_name: hlf-explorer-db
