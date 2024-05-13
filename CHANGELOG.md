@@ -44,6 +44,19 @@
 * [287d3ae](https://github.com/hyperledger-labs/blockchain-explorer/commit/287d3ae) update CODEOWNERS (#330)
 * [a2121f0](https://github.com/hyperledger-labs/blockchain-explorer/commit/a2121f0) added github issue form (#325)
 
+## [0.0.2](https://github.com/bcvouch/bcvouch-hlf-explorer/compare/hlf-explorer-db-v0.0.1...hlf-explorer-db-v0.0.2) (2024-05-13)
+
+
+### Bug Fixes
+
+* convert-hex can’t convert Buffer to Hex properly ([#283](https://github.com/bcvouch/bcvouch-hlf-explorer/issues/283)) ([e02ff4c](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/e02ff4ce2fd8904c63b5f37f253c3706653295a7))
+* **github:** add build-docker ([15f9636](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/15f9636c6d6492b7563b6bcfa8c934db3e0bdcfe))
+* **github:** add build-explorer-db ([4020170](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/4020170e7c8100af7dbe9d08f4409d8667f07a85))
+* **github:** debug release job ([91dbd30](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/91dbd30468894081f5644c761a09921035a2d15d))
+* **github:** debug runner ([8f0cc46](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/8f0cc469dd6689ffa69c43df375b0acac3fff1f5))
+* **github:** update release job ([3ebf197](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/3ebf197bf1c76bbc34137d5e00898536e6961368))
+* **github:** update workflows ([01b4187](https://github.com/bcvouch/bcvouch-hlf-explorer/commit/01b41877027c6e268bf2849ff0ff1ab4461fd1ce))
+
 ## v1.1.8
 
 * [fd38eb8](https://github.com/hyperledger/blockchain-explorer/commit/fd38eb8) [BE-881](https://jira.hyperledger.org/browse/BE-881) Update package-lock.json files
@@ -334,4 +347,3 @@
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
