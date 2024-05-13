@@ -9,7 +9,7 @@ on:
       - main
       - dev
     paths:
-      - 'postgres-Dockerfile'
+      - 'postgres/postgres-Dockerfile'
       - '!**.md'
       - '.github/workflows/build-explorer-db.yml'
       - 'app/persistence/fabric/postgreSQL/db/**'
@@ -21,4 +21,4 @@ jobs:
     with:
       image_name: bcvouch/hlf-explorer-db
       app_name: hlf-explorer-db
-      dockerfile: postgres-Dockerfile
+      dockerfile: postgres/postgres-Dockerfile
