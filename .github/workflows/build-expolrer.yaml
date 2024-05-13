@@ -1,35 +1,24 @@
-name: build
+name: Build hlf-explorer
 
-on: 
+on:
+  workflow_dispatch:
   push:
+    tags:
+      - hlf-explorer*
     branches:
       - main
-  pull_request:
-    branches:
-     - main
+      - dev
+    # paths:
+    #   - 'Dockerfile'
+    #   - '!**.md'
+    #   - '.github/workflows/build-explorer.yml'
+    #   - 'app/persistence/fabric/postgreSQL/db/**'
+
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: install server dependencies
-      run: npm install
-
-    - name: build server
-      run: npm run build
-
-    - name: install client dependencies
-      run: npm install --prefix client
-
-      
-    - name: build client 
-      run: CI=false npm run build --prefix client     #warnning are considered as failed build, skipping warnings 
-
+    uses: bcvouch/gha-workflows/.github/workflows/build-mono.yaml@main
+    secrets: inherit
+    with:
+      image_name: bcvouch/hlf-explorer
+      app_name: hlf-explorer
+      dockerfile: Dockerfile

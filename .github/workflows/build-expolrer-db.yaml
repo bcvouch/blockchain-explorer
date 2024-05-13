@@ -12,6 +12,7 @@ on:
       - 'postgres-Dockerfile'
       - '!**.md'
       - '.github/workflows/build-explorer-db.yml'
+      - 'app/persistence/fabric/postgreSQL/db/**'
 
 jobs:
   build:
