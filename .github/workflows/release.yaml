@@ -9,12 +9,12 @@ on:
   create:
     tags:
       - v*
-  push:
-    branches:
-      - main
-    paths:
-      - "Dockerfile"
-      - "postgres-Dockerfile"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "Dockerfile"
+  #     - "postgres-Dockerfile"
 
 env:
   REGISTRY: ghcr.io
